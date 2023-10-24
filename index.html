@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="description"
+      content="4niture akan membantu anda untuk menemukan furniture yang cocok untuk ruangan Anda. Kami menyediakan furniture yang lengkap dengan harga yang bersahabat."
+    />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://4niture.demanganesia.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="4niture - Penyedia Furniture Khusus Untuk Anda" />
+    <meta
+      property="og:description"
+      content="4niture akan membantu anda untuk menemukan furniture yang cocok untuk ruangan Anda. Kami menyediakan furniture yang lengkap dengan harga yang bersahabat."
+    />
+    <meta property="og:image" content="https://4niture.demanganesia.com/assets/images/banner.png" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="4niture.demanganesia.com" />
+    <meta property="twitter:url" content="https://4niture.demanganesia.com/" />
+    <meta name="twitter:title" content="4niture - Penyedia Furniture Khusus Untuk Anda" />
+    <meta
+      name="twitter:description"
+      content="4niture akan membantu anda untuk menemukan furniture yang cocok untuk ruangan Anda. Kami menyediakan furniture yang lengkap dengan harga yang bersahabat."
+    />
+    <meta name="twitter:image" content="https://4niture.demanganesia.com/assets/images/banner.png" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/favicon" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/styles/style.css" />
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/styles/responsive.css" />
+
+    <!-- BoxIcons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Alpine JS -->
+    <script src="https://unpkg.com/alpinejs" defer></script>
+
+    <title>4niture - Penyedia Furniture Khusus Untuk Anda</title>
+  </head>
+  <body x-data="alpineData()">
+    <!-- Header Start -->
+    <header id="header">
+      <div class="header_container container">
+        <div class="header_logos">
+          <a class="header_logo" href="#">4niture</a>
+        </div>
+        <nav class="header_links">
+          <a class="header_link" href="#produk">Produk</a>
+          <a class="header_link" href="#pengalaman">Pengalaman</a>
+          <a class="header_link" href="#testimoni">Testimoni</a>
+          <a class="header_link" href="#kontak">Kontak</a>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div @click="open = !open" class="mobile_menu">
+          <i class="bx bx-menu"></i>
+        </div>
+      </div>
+      <nav
+        x-show="open"
+        x-transition:enter.duration.500ms
+        x-transition:leave.duration.400ms
+        x-transition:enter.scale.80
+        x-transition:leave.scale.90
+        x-transition.scale.origin.top
+        class="mobile_menu_links"
+      >
+        <a class="mobile_menu_link" href="#produk">Produk</a>
+        <a class="mobile_menu_link" href="#pengalaman">Pengalaman</a>
+        <a class="mobile_menu_link" href="#testimoni">Testimoni</a>
+        <a class="mobile_menu_link" href="#kontak">Kontak</a>
+      </nav>
+    </header>
+    <!-- Header End -->
+
+    <!-- Main Start -->
+    <main>
+      <!-- Hero Article Start -->
+      <article class="hero section">
+        <div class="hero_container container">
+          <h1 class="hero_title">Buat Ruanganmu Lebih Minimalis dan Modern</h1>
+          <p class="hero_desc">Gunakan Interior dari kami agar ruanganmu lebih minimalis dan modern dengan mudah dan cepat</p>
+          <a class="btn btn_hero" href="#why_us">Selengkapnya</a>
+        </div>
+      </article>
+      <!-- Hero Article End -->
+
+      <!-- Why Us Article Start -->
+      <article id="why_us" class="why_us section">
+        <div class="why_us_container container">
+          <h2 class="section_title">Mengapa Harus Kami</h2>
+          <div class="why_us_cards">
+            <!-- Reason 1 -->
+            <div class="why_us_card">
+              <h3 class="why_us_card_title">Fasilitas mewah</h3>
+              <p class="why_us_card_desc">Kami memberikan Anda pelayanan yang nyaman dan fasilitas yang lengkap</p>
+              <span class="why_us_card_btn"
+                >Detail
+                <i class="bx bx-right-arrow-alt detail_icon"></i>
+              </span>
+            </div>
+            <!-- Reason 2 -->
+            <div class="why_us_card">
+              <h3 class="why_us_card_title">Harga terjangkau</h3>
+              <p class="why_us_card_desc">
+                Pelanggan mendapatkan kualitas terbaik dengan harga terjangkau dan juga menikmati fasilitas terbaik
+              </p>
+              <span class="why_us_card_btn"
+                >Detail
+                <i class="bx bx-right-arrow-alt detail_icon"></i>
+              </span>
+            </div>
+            <!-- Reason 3 -->
+            <div class="why_us_card">
+              <h3 class="why_us_card_title">Pilihan beragam</h3>
+              <p class="why_us_card_desc">Kami menyediakan pilihan yang beragam sesuai dengan keinginan pelanggan</p>
+              <span class="why_us_card_btn"
+                >Detail
+                <i class="bx bx-right-arrow-alt detail_icon"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- Why Us Article End -->
+
+      <!-- Product Article Start -->
+      <article id="produk" class="product section">
+        <div class="product_container container">
+          <h2 class="section_title">Produk Kami</h2>
+          <div class="product_tabs">
+            <span class="product_tab" :class="toggle == 0 && 'product_tab_active'" @click="toggle = 0">Kursi</span>
+            <span class="product_tab" :class="toggle == 1 && 'product_tab_active'" @click="toggle = 1">Ranjang</span>
+            <span class="product_tab" :class="toggle == 2 && 'product_tab_active'" @click="toggle = 2">Sofa</span>
+            <span class="product_tab" :class="toggle == 3 && 'product_tab_active'" @click="toggle = 3">Lampu</span>
+          </div>
+
+          <!-- Kursi -->
+          <div class="product_cards" x-show="toggle == 0">
+            <!-- Produk Kursi 1 -->
+            <div class="product_card">
+              <div class="product_card_header">
+                <img class="product_card_img" src="assets/images/kursi1.jpg" loading="lazy" />
+              </div>
+              <div class="product_card_body">
+                <span class="product_card_category">Kursi</span>
+                <h3 class="product_card_title">Kursi Santai</h3>
+                <div class="product_card_price">
+                  <p class="product_card_price_txt">Rp 80.000</p>
+                  <i class="bx bxs-plus-circle buy_icon"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Produk Kursi 2 -->
+            <div class="product_card">
+              <div class="product_card_header">
+                <img class="product_card_img" src="assets/images/kursi2.jpg" loading="lazy" />
+              </div>
+              <div class="product_card_body">
+                <span class="product_card_category">Kursi</span>
+                <h3 class="product_card_title">Kursi Hitam Elegan</h3>
+                <div class="product_card_price">
+                  <p class="product_card_price_txt">Rp 95.000</p>
+                  <i class="bx bxs-plus-circle buy_icon"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Produk Kursi 3 -->
+            <div class="product_card">
+              <div class="product_card_header">
+                <img class="product_card_img" src="assets/images/kursi3.jpg" loading="lazy" />
+              </div>
+              <div class="product_card_body">
+                <span class="product_card_category">Kursi</span>
+                <h3 class="product_card_title">Kursi Bunga</h3>
+                <div class="product_card_price">
+                  <p class="product_card_price_txt">Rp 60.000</p>
+                  <i class="bx bxs-plus-circle buy_icon"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Produk Kursi 4 -->
+            <div class="product_card">
+              <div class="product_card_header">
+                <img class="product_card_img" src="assets/images/kursi4.jpg" loading="lazy" />
+              </div>
+              <div class="product_card_body">
+                <span class="product_card_category">Kursi</span>
+                <h3 class="product_card_title">Kursi Estetik</h3>
+                <div class="product_card_price">
+                  <p class="product_card_price_txt">Rp 70.000</p>
+                  <i class="bx bxs-plus-circle buy_icon"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ranjang -->
+          <div class="product_cards" x-show="toggle == 1">
+            <!-- Produk Ranjang 1 -->
+            <div class="product_card">
+              <div class="product_card_header">
+                <img class="product_card_img" src="assets/images/ranjang1.png" loading="lazy" />
+              </div>
+              <div class="product_card_body">
+                <span class="product_card_category">Ranjang</span>
+                <h3 class="product_card_title">Ranjang White Luxury</h3>
+                <div class="product_card_price">
+                  <p class="product_card_price_txt">Rp 850.000</p>
+                  <i class="bx bxs-plus-circle buy_icon"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Produk Ranjang 2 -->
+            <div class="product_card">
+              <div class="product_card_header">
+                <img class="product_card_img" src="assets/images/ranjang2.png" loading="lazy" />
+              </div>
+              <div class="product_card_body">
+                <span class="product_card_category">Ranjang</span>
+                <h3 class="product_card_title">Ranjang Simple</h3>
+                <div class="product_card_price">
+                  <p class="product_card_price_txt">Rp 700.000</p>
+                  <i class="bx bxs-plus-circle buy_icon"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Produk Ranjang 3 -->
+            <div class="product_card">
+              <div class="product_card_header">
+                <img class="product_card_img" src="assets/images/ranjang3.png" loading="lazy" />
+              </div>
+              <div class="product_card_body">
+                <span class="product_card_category">Ranjang</span>
+                <h3 class="product_card_title">Ranjang Small Tebal</h3>
+                <div class="product_card_price">
+                  <p class="product_card_price_txt">Rp 500.000</p>
+                  <i class="bx bxs-plus-circle buy_icon"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Produk Ranjang 4 -->
+            <div class="product_card">
+              <div class="product_card_header">
+                <img class="product_card_img" src="assets/images/ranjang4.png" loading="lazy" />
+              </div>
+              <div class="product_card_body">
+                <span class="product_card_category">Ranjang</span>
+                <h3 class="product_card_title">Modern Ranjang</h3>
+                <div class="product_card_price">
+                  <p class="product_card_price_txt">Rp 850.000</p>
+                  <i class="bx bxs-plus-circle buy_icon"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sofa -->
+          <div class="product_cards" x-show="toggle == 2">
+            <!-- Produk Sofa 1 -->
+            <div class="product_card">
+              <div class="product_card_header">
+                <img class="product_card_img" src="assets/images/sofa1.png" loading="lazy" />
+              </div>
+              <div class="product_card_body">
+                <span class="product_card_category">Sofa</span>
+                <h3 class="product_card_title">Green Sofa</h3>
+                <div class="product_card_price">
+                  <p class="product_card_price_txt">Rp 359.500</p>
+                  <i class="bx bxs-plus-circle buy_icon"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Produk Sofa 2 -->
+            <div class="product_card">
+              <div class="product_card_header">
+                <img class="product_card_img" src="assets/images/sofa2.png" loading="lazy" />
+              </div>
+              <div class="product_card_body">
+                <span class="product_card_category">Sofa</span>
+                <h3 class="product_card_title">Gray Sofa with Pillow</h3>
+                <div class="product_card_price">
+                  <p class="product_card_price_txt">Rp 450.000</p>
+                  <i class="bx bxs-plus-circle buy_icon"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Produk Sofa 3 -->
+            <div class="product_card">
+              <div class="product_card_header">
+                <img class="product_card_img" src="assets/images/sofa3.png" loading="lazy" />
+              </div>
+              <div class="product_card_body">
+                <span class="product_card_category">Sofa</span>
+                <h3 class="product_card_title">Comfortable Sofa</h3>
+                <div class="product_card_price">
+                  <p class="product_card_price_txt">Rp 400.000</p>
+                  <i class="bx bxs-plus-circle buy_icon"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Produk Sofa 4 -->
+            <div class="product_card">
+              <div class="product_card_header">
+                <img class="product_card_img" src="assets/images/sofa4.png" loading="lazy" />
+              </div>
+              <div class="product_card_body">
+                <span class="product_card_category">Sofa</span>
+                <h3 class="product_card_title">Luxury Sofa</h3>
+                <div class="product_card_price">
+                  <p class="product_card_price_txt">Rp 550.000</p>
+                  <i class="bx bxs-plus-circle buy_icon"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lampu -->
+          <div class="product_cards" x-show="toggle == 3">
+            <!-- Produk Lampu 1 -->
+            <div class="product_card">
+              <div class="product_card_header">
+                <img class="product_card_img" src="assets/images/lampu1.png" loading="lazy" />
+              </div>
+              <div class="product_card_body">
+                <span class="product_card_category">Lampu</span>
+                <h3 class="product_card_title">Lampu Belajar</h3>
+                <div class="product_card_price">
+                  <p class="product_card_price_txt">Rp 60.000</p>
+                  <i class="bx bxs-plus-circle buy_icon"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Produk Lampu 2 -->
+            <div class="product_card">
+              <div class="product_card_header">
+                <img class="product_card_img" src="assets/images/lampu2.png" loading="lazy" />
+              </div>
+              <div class="product_card_body">
+                <span class="product_card_category">Lampu</span>
+                <h3 class="product_card_title">Standing Golden Lamp</h3>
+                <div class="product_card_price">
+                  <p class="product_card_price_txt">Rp 95.000</p>
+                  <i class="bx bxs-plus-circle buy_icon"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Produk Lampu 3 -->
+            <div class="product_card">
+              <div class="product_card_header">
+                <img class="product_card_img" src="assets/images/lampu3.png" loading="lazy" />
+              </div>
+              <div class="product_card_body">
+                <span class="product_card_category">Lampu</span>
+                <h3 class="product_card_title">Standing Black Lamp</h3>
+                <div class="product_card_price">
+                  <p class="product_card_price_txt">Rp 80.000</p>
+                  <i class="bx bxs-plus-circle buy_icon"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- Product Article End -->
+
+      <!-- Pengalaman Article Start -->
+      <article id="pengalaman" class="pengalaman section">
+        <div class="pengalaman_container container">
+          <div class="pengalaman_imgs">
+            <img src="assets/images/pengalaman_img.png" loading="lazy" />
+          </div>
+          <div class="pengalaman_txt">
+            <span class="section_subtitle">pengalaman</span>
+            <h2 class="section_title">Kami Menawarkan Pengalaman Terbaik</h2>
+            <p class="section_desc">
+              Tidak perlu khawatir dengan hasil karena produk kami dibuat oleh para profesional di bidangnya dengan model yang elegan
+            </p>
+            <span class="pengalaman_btn"
+              >Detail
+              <i class="bx bx-right-arrow-alt detail_icon"></i>
+            </span>
+          </div>
+        </div>
+      </article>
+      <!-- Pengalaman Article End -->
+
+      <!-- Bahan Article Start -->
+      <article class="bahan section">
+        <div class="bahan_container container">
+          <div class="bahan_txt">
+            <span class="section_subtitle">Bahan terbaik</span>
+            <h2 class="section_title">Menggunakan bahan terbaik yang pernah ada</h2>
+            <p class="section_desc">
+              Kami selalu menggunakan bahan terbaik untuk membuat furnitur namun menjual dengan harga yang terjangkau
+            </p>
+            <span class="bahan_btn"
+              >Detail
+              <i class="bx bx-right-arrow-alt detail_icon"></i>
+            </span>
+          </div>
+          <div class="bahan_imgs">
+            <img src="assets/images/bahan_img.png" loading="lazy" />
+          </div>
+        </div>
+      </article>
+      <!-- Bahan Article End -->
+
+      <!-- Testimoni Artice Start -->
+      <article id="testimoni" class="testimoni section">
+        <div class="testimoni_container container">
+          <span class="section_subtitle">Testimoni</span>
+          <h2 class="section_title">Testimoni Pembeli</h2>
+          <div class="testimoni_cards">
+            <!-- testimoni 1 -->
+            <div class="testimoni_card">
+              <img class="testimoni_card_bg" src="assets/images/testimoni_bg1.png" loading="lazy" />
+              <div class="testimoni_card_txt">
+                <img class="testimoni_card_foto_profil" src="assets/images/testimoni_pp1.png" loading="lazy" />
+                <h3 class="testimoni_card_name">James Jenskin</h3>
+                <span class="testimoni_card_position">Manager PT Hura-hura</span>
+                <p class="testimoni_card_teks">“Terima kasih sekarang ruangan kerja saya menjadi lebih mewah”</p>
+              </div>
+            </div>
+            <!-- testimoni 2 -->
+            <div class="testimoni_card">
+              <img class="testimoni_card_bg" src="assets/images/testimoni_bg2.png" loading="lazy" />
+              <div class="testimoni_card_txt">
+                <img class="testimoni_card_foto_profil" src="assets/images/testimoni_pp2.png" loading="lazy" />
+                <h3 class="testimoni_card_name">Rudy Tabuti</h3>
+                <span class="testimoni_card_position">Public Relation</span>
+                <p class="testimoni_card_teks">“Saya dapat menjamu tamu dengan tenang berkat ruangan yang minimalis”</p>
+              </div>
+            </div>
+            <!-- testimoni 3 -->
+            <div class="testimoni_card">
+              <img class="testimoni_card_bg" src="assets/images/testimoni_bg3.png" loading="lazy" />
+              <div class="testimoni_card_txt">
+                <img class="testimoni_card_foto_profil" src="assets/images/testimoni_pp3.png" loading="lazy" />
+                <h3 class="testimoni_card_name">Claudia Monroe</h3>
+                <span class="testimoni_card_position">Sekretaris</span>
+                <p class="testimoni_card_teks">“Sangat rekomendasi untuk mencari furnitur dan terpercaya”</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- Testimoni Artice End -->
+
+      <!-- Aside Contact Start -->
+      <aside id="kontak" class="contact section">
+        <div class="contact_container container">
+          <div class="contact_imgs">
+            <img class="contact_img" src="assets/images/contact_img.png" loading="lazy" />
+          </div>
+          <div class="contact_txt">
+            <h2 class="section_title">Dapatkan informasi terbaru</h2>
+            <p class="section_desc">Masukkan email kamu untuk mendapatkan informasi terbaru termasuk diskon spesial dari kami</p>
+            <input type="email" placeholder="Masukkan email disini" />
+            <button class="btn btn_submit">Berlangganan</button>
+          </div>
+        </div>
+      </aside>
+      <!-- Aside Contact End -->
+    </main>
+    <!-- Main End -->
+
+    <!-- Footer Start -->
+    <footer>
+      <div class="footer_container container">
+        <div class="footer_data">
+          <div>
+            <h4 class="footer_logo">4niture</h4>
+            <p class="footer_desc">Menyediakan furniture dengan bahan dan harga terbaik untuk kepuasan pelanggan</p>
+          </div>
+          <div>
+            <p class="footer_header">Tentang Kami</p>
+            <nav class="footer_links">
+              <a class="footer_link" href="#">Kontak</a>
+              <a class="footer_link" href="#">Tentang</a>
+              <a class="footer_link" href="#">Privacy</a>
+              <a class="footer_link" href="#">Syarat dan Ketentuan</a>
+            </nav>
+          </div>
+          <div>
+            <p class="footer_header">Furnitur</p>
+            <nav class="footer_links">
+              <a class="footer_link" href="#">Kursi</a>
+              <a class="footer_link" href="#">Ranjang</a>
+              <a class="footer_link" href="#">Sofa</a>
+              <a class="footer_link" href="#">Lampu</a>
+            </nav>
+          </div>
+          <div>
+            <p class="footer_header">Ikuti Kami</p>
+            <nav class="footer_links">
+              <a class="footer_link footer_social" href="#"><i class="bx bxl-facebook social_icon"></i>Facebook</a>
+              <a class="footer_link footer_social" href="#"><i class="bx bxl-twitter social_icon"></i>Twitter</a>
+              <a class="footer_link footer_social" href="#"><i class="bx bxl-instagram social_icon"></i>Instagram</a>
+            </nav>
+          </div>
+        </div>
+        <div class="footer_sub">
+          <p>All Right Reserved @<span id="yearFooter"></span></p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

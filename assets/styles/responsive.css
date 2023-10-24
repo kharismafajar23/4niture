@@ -1,0 +1,184 @@
+@media screen and (max-width: 1024px) {
+  .section {
+    padding: 60px 30px;
+  }
+  footer {
+    padding: 50px 30px 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section_title {
+    font-size: 2rem;
+  }
+
+  .section_subtitle {
+    font-size: 0.8rem;
+  }
+
+  .why_us_container {
+    gap: 60px;
+  }
+
+  .why_us_card_title {
+    font-size: 1.25rem;
+    min-height: 50px;
+  }
+
+  .why_us_card_desc {
+    font-size: 1rem;
+  }
+
+  .product_cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .testimoni_cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .testimoni_card,
+  .testimoni_card_bg {
+    width: 250px;
+    height: 320px;
+  }
+
+  .testimoni_card_name {
+    font-size: 0.9rem;
+  }
+
+  .testimoni_card_position {
+    font-size: 0.8rem;
+  }
+
+  .testimoni_card_teks {
+    font-size: 0.8rem;
+  }
+
+  .contact_container {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .footer_desc {
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  :root {
+    --header-height: 60px;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  .header_logo {
+    font-size: 1.5rem;
+  }
+
+  .header_links {
+    display: none;
+  }
+
+  .mobile_menu {
+    display: block;
+  }
+
+  .mobile_menu_links {
+    display: flex;
+  }
+
+  .mobile_menu_link {
+    color: var(--black-color);
+  }
+
+  .hero {
+    height: 100vh;
+  }
+
+  .hero_title {
+    font-size: 2.1rem;
+  }
+
+  .hero_desc {
+    font-size: 1rem;
+  }
+
+  .why_us_container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .why_us_container .section_title {
+    max-width: max-content;
+  }
+
+  .why_us_cards {
+    flex-direction: column;
+  }
+
+  .why_us_card_title {
+    min-height: fit-content;
+    margin-bottom: 8px;
+  }
+
+  .product_tabs {
+    padding: 11px 4px;
+  }
+
+  .product_tab {
+    font-size: 0.85rem;
+    padding: 8px 20px;
+  }
+
+  .product_cards {
+    gap: 15px;
+  }
+
+  .pengalaman_container,
+  .contact_container {
+    flex-direction: column;
+  }
+
+  .pengalaman_imgs,
+  .pengalaman_txt,
+  .bahan_txt,
+  .bahan_imgs,
+  .contact_imgs,
+  .contact_txt {
+    width: 100%;
+  }
+
+  .bahan_container {
+    flex-direction: column-reverse;
+  }
+
+  .footer_data {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .product_tabs {
+    padding: 10px 4px;
+  }
+
+  .product_tab {
+    padding: 7px 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .product_tabs {
+    padding: 8px 4px;
+  }
+
+  .product_tab {
+    padding: 6px 10px;
+  }
+}
